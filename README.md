@@ -45,7 +45,7 @@ Questo script va utilizzato se:
 
 ## 🤝 Supporto
 
-* **Guida Completa:** [Leggi l'articolo su Angolo di Windows](https://www.angolodiwindows.com)
+* **Guida Completa:** [Leggi l'articolo su Angolo di Windows]([https://www.angolodiwindows.com](https://angolodiwindows.com/2018/05/fix-risoluzione-problemi-windows-update/))
 * **Discussioni:** Unisciti al nostro subreddit dedicato.
 * **Segnalazioni:** Se riscontri problemi, apri una *Issue* in questo repository.
 
