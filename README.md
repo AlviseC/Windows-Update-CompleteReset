@@ -1,55 +1,57 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Windows Support](https://img.shields.io/badge/Windows-10%2F11-blue)
+![Category](https://img.shields.io/badge/Category-System%20Repair-orange)
+
 # 🛠️ Deep Windows Update Repair Tool
-**Utility avanzata per la ri-registrazione delle librerie di sistema e il reset degli ID di Windows Update.**
+Advanced Windows Update Library Re-registration & ID Reset Utility
+This script is an intensive solution designed to resolve critical Windows Update errors (such as 0x800... codes) that cannot be fixed by simply clearing the cache. It is an advanced resource provided by the angolodiwindows.com community.
 
-Questo script è una soluzione intensiva per risolvere errori critici di Windows Update (come gli errori `0x800...`) che non si risolvono con la semplice pulizia della cache. È una risorsa avanzata della community di [angolodiwindows.com](https://www.angolodiwindows.com).
+🚀 What does this script do?
+Unlike standard repair tools, this utility performs deep operations on the OS core:
 
----
+System DLL Re-registration
 
-## 🚀 Cosa fa questo script?
+Re-registers over 20 critical libraries (.dll) responsible for the proper functioning of Windows Update, WMI, and Cryptographic Services.
 
-A differenza della versione base, questo tool esegue operazioni profonde sul cuore del sistema operativo:
+Fixes issues related to "Interface not registered" or missing components.
 
-### 1. Re-registrazione DLL di Sistema
-* Registra nuovamente oltre 20 librerie critiche (`.dll`) responsabili del corretto funzionamento di Windows Update, WMI e dei servizi crittografici.
-* Risolve problemi legati a "Interfaccia non registrata" o componenti mancanti.
+Cryptographic Components Reset
 
-### 2. Reset dei Componenti Crittografici
-* Deregistra e registra nuovamente i moduli `wintrust`, `initpki`, `mssip32` e altri, fondamentali per la verifica della firma digitale degli aggiornamenti.
+Unregisters and re-registers modules such as wintrust, initpki, mssip32, and others essential for verifying update digital signatures.
 
-### 3. Reset dell'Identità del Client (WSUS/WU)
-* Elimina le chiavi di registro `AccountDomainSid`, `PingID` e `SusClientId`. 
-* Questo forza Windows a rigenerare un nuovo identificativo univoco, risolvendo i conflitti di comunicazione con i server Microsoft.
+Client Identity Reset (WSUS/WU)
 
----
+Deletes specific registry keys: AccountDomainSid, PingID, and SusClientId.
 
-## 💻 Istruzioni per l'uso
+This forces Windows to regenerate a new unique identifier, resolving communication conflicts with Microsoft servers.
 
-1. **Download:** Scarica il file `deep_wu_repair.bat`.
-2. **Avvio:** Eseguilo con un doppio clic. Grazie all'auto-elevazione integrata, lo script richiederà i **privilegi di Amministratore** necessari.
-3. **Automazione:** Lo script gira in modalità "Silent". Non dovrai cliccare "OK" su decine di popup di sistema; farà tutto da solo.
-4. **Finalizzazione:** Al termine, lo script forzerà un nuovo ciclo di rilevamento aggiornamenti (`wuauclt /detectnow`).
+💻 Instructions for Use
+Download: Download the deep_wu_repair.bat file.
 
----
+Launch: Run it with a double-click. Thanks to built-in auto-elevation, the script will automatically request the necessary Administrator privileges.
 
-## ⚠️ Quando usare questo tool?
+Automation: The script runs in "Silent" mode. You won't have to click "OK" on dozens of system popups; it handles everything autonomously.
 
-Questo script va utilizzato se:
-* La pulizia della cartella `SoftwareDistribution` non ha funzionato.
-* Ricevi errori relativi a file di sistema o librerie DLL corrotte.
-* Il tuo PC sembra "non vedere" nuovi aggiornamenti nonostante sia connesso a internet.
+Finalization: Once finished, the script forces a new update detection cycle (wuauclt /detectnow).
 
-> [!WARNING]
-> **Nota di sicurezza:** Questo script modifica chiavi di registro e registra componenti di sistema. Sebbene sia testato, è consigliabile creare un **Punto di Ripristino** prima dell'esecuzione.
+⚠️ When should you use this tool?
+Use this script if:
 
----
+Clearing the SoftwareDistribution folder did not work.
 
-## 🤝 Supporto
+You receive errors related to corrupted system files or DLL libraries.
 
-* **Guida Completa:** [Leggi l'articolo su Angolo di Windows]- https://www.angolodiwindows.com](https://angolodiwindows.com/2018/05/fix-risoluzione-problemi-windows-update/ 
-* **Discussioni:** Unisciti al nostro subreddit dedicato - https://www.reddit.com/r/AngolodiWindowsITA/
-* **Segnalazioni:** Se riscontri problemi, apri una *Issue* in questo repository.
+Your PC seems "blind" to new updates despite being connected to the internet.
 
----
+[!WARNING]
+Security Note: This script modifies registry keys and registers system components. Although tested, it is highly recommended to create a System Restore Point before execution.
 
-## 📄 Licenza
-Rilasciato sotto licenza MIT. Libero per uso personale e commerciale citando la fonte.
+🤝 Support
+Full Guide: Read the article on Angolo di Windows
+
+Discussions: Join our dedicated subreddit - r/AngolodiWindowsITA
+
+Reporting: If you encounter issues, please open an Issue in this repository.
+
+📄 License
+Released under the MIT License. Free for personal and commercial use, provided that the source is cited.
